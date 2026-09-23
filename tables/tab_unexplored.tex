@@ -1,0 +1,23 @@
+
+\begin{center}
+\footnotesize
+\captionof{table}{Unexplored variant combinations in the TTP design space.}
+\label{tab:unexplored}
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}llp{5cm}cp{7.5cm}@{}}
+\toprule
+\textbf{Base} & \textbf{+ dimension} & \textbf{Resulting formulation} & \textbf{Studied?} & \textbf{Suggested name} \\
+\midrule
+CCTTP & + per-city time windows & Stochastic time-window TTP & No & Chance-constrained TTPTW (CC-TTPTW) \\
+MTTP & + bi-objective (time vs profit) & Multi-thief bi-objective TTP & No & Bi-objective MTTP \\
+CCTTP & + dynamic instance & Dynamic chance-constrained TTP & No & Dynamic CCTTP \\
+ThOP & + multiple agents & Multi-thief orienteering & No & Multi-agent ThOP \\
+PWT & + chance constraint & Stochastic packing-while-traveling & Partial & Chance-constrained PWT (\cite{don2026greedy}: greedy only) \\
+TTP2 & + dynamic instance & Dynamic bi-objective TTP & Yes & DMOTTP \citep{herring2020dynamic} \\
+TTPTW & + stochastic weights & Stochastic time-window TTP & No & Stochastic TTPTW \\
+DTTP & + multiple thieves & Dynamic multi-thief TTP & No & Dynamic MTTP \\
+TTP1 & + time-decaying profit + time windows & Time-sensitive value TTPTW & No & Value-decay TTPTW \\
+TTP-D & + multiple drones / bi-objective & Multi-drone or bi-objective drone TTP & No & \citep{murjani2026drive} covers a single vehicle + single drone, single-objective \\
+\bottomrule
+\end{tabular}
+\end{center}

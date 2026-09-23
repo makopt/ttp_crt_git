@@ -1,0 +1,74 @@
+% PRISMA 2020 study-selection flow. All counts are exact, from the logged
+% search of Scopus and Web of Science on 5 September 2026 (Section 2.2),
+% plus a supplementary, non-exhaustive Google Scholar pass for preprints not
+% indexed by either database.
+\newcommand{\nScopus}{450}     % Scopus, raw query, no database-level filter
+\newcommand{\nWoS}{670}        % Web of Science, raw query, no database-level filter
+\newcommand{\nUnion}{1{,}120}  % records identified, Scopus + Web of Science
+\newcommand{\nDup}{439}        % duplicate records removed
+\newcommand{\nScreened}{681}   % records screened after duplicate removal
+\newcommand{\nExclScreen}{594} % excluded at screening
+\newcommand{\nRemain}{87}      % records retained after screening (before Google Scholar)
+\newcommand{\nGS}{15}          % records added via Google Scholar (other methods)
+\newcommand{\nCombined}{102}   % reports assessed for eligibility, \nRemain + \nGS
+\newcommand{\nExclFTa}{7}      % excluded: theses
+\newcommand{\nExclFTb}{1}      % excluded: short abstract with no model
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[
+  font=\footnotesize,
+  >={Stealth[length=2mm]},
+  node distance=0.6cm,
+  box/.style={draw=VarTTP1!55!black,line width=0.7pt,fill=VarTTP1!30,
+              align=center,inner sep=5pt,text width=5.2cm,rounded corners=2pt},
+  other/.style={draw=VarThOP!55!black,line width=0.7pt,fill=VarThOP!25,
+              align=center,inner sep=5pt,text width=3.6cm,rounded corners=2pt},
+  exc/.style={draw=FigAmber!55!black,line width=0.6pt,fill=FigAmber!18,align=left,
+              inner sep=4pt,text width=3.6cm,rounded corners=2pt,font=\scriptsize},
+  inc/.style={draw=VarThOP!50!black,line width=0.9pt,fill=VarThOP!50,text=black,
+              align=center,inner sep=5pt,text width=5.2cm,rounded corners=2pt},
+  a/.style={->,line width=0.8pt,black!55},
+]
+\node[box] (id)
+  {\textbf{Identification.} Records identified from two databases,
+   searched 5 September 2026\\[2pt]
+   \scriptsize Scopus (n=\nScopus), Web of Science (n=\nWoS)\\[2pt]
+   Combined\ \ \textbf{n=\nUnion}};
+\node[box,below=of id] (dedup)
+  {Records screened after duplicate removal\ \ \textbf{n=\nScreened}};
+\node[box,below=1.0cm of dedup] (screen)
+  {\textbf{Screening.} Records retained after screening\ \ \textbf{n=\nRemain}};
+\node[box,below=1.2cm of screen] (combined)
+  {Reports assessed for eligibility\ \ \textbf{n=\nCombined}};
+\node[inc,below=1.0cm of combined] (final)
+  {\textbf{Included.} Studies in the review\ \ \textbf{94}\\
+   \scriptsize 93 primary studies $+$ 1 prior systematic survey};
+
+\node[other,left=0.9cm of combined] (other)
+  {\textbf{Identified via other methods.} Google Scholar, preprints not
+   indexed by either database\ \ \textbf{n=\nGS}};
+
+\node[exc,right=0.5cm of dedup] (e1)
+  {\textbf{n=\nDup} duplicate records removed};
+\node[exc,right=0.5cm of screen] (e2)
+  {\textbf{n=\nExclScreen} excluded at screening: off-topic, including the
+   TTP used only as a minor example; not in English; outside January 2013 to
+   September 2026; an excluded document type; or a short abstract with no
+   model};
+\node[exc,right=0.5cm of final] (e3)
+  {\textbf{n=8} excluded after combining the two streams: theses
+   (n=\nExclFTa); short abstract with no model (n=\nExclFTb)};
+
+\draw[a] (id) -- (dedup);
+\draw[a] (dedup) -- (screen);
+\draw[a] (screen) -- (combined);
+\draw[a] (other) -- (combined);
+\draw[a] (combined) -- (final);
+\draw[a] (dedup.east) -- (e1.west);
+\draw[a] (screen.east) -- (e2.west);
+\draw[a] (final.east)  -- (e3.west);
+\end{tikzpicture}
+\caption{Study selection following the PRISMA~2020 statement \citep{page2021prisma}.}
+\label{fig:prisma}
+\end{figure}

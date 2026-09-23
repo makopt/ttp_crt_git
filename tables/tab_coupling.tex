@@ -1,0 +1,19 @@
+\begin{table}[htbp]
+\centering
+\footnotesize
+\caption{The 84 method-proposing studies by how they handle the tour--packing coupling, against the eight algorithm families of Table~\ref{tab:reporting}.}
+\label{tab:coupling}
+\begin{tabular}{@{}lccccccccc@{}}
+\toprule
+\textbf{Coupling strategy} & \textbf{Exact} & \textbf{Approx.} & \textbf{Constr.} & \textbf{Single-sol.} & \textbf{Pop.-based} & \textbf{Hyper-h.} & \textbf{Learning} & \textbf{Quantum} & \textbf{Total} \\
+\midrule
+Sequential / decoupled & 2 & 5 & 5 & 0 & 0 & 0 & 1 & 0 & 13 \\
+Periodic / alternating & 0 & 0 & 1 & 4 & 4 & 7 & 1 & 0 & 17 \\
+Joint search & 3 & 0 & 0 & 9 & 34 & 0 & 0 & 1 & 47 \\
+Move-synchronized & 0 & 0 & 0 & 3 & 0 & 0 & 0 & 0 & 3 \\
+Learned coordination & 0 & 0 & 0 & 0 & 0 & 0 & 4 & 0 & 4 \\
+\midrule
+Total & 5 & 5 & 6 & 16 & 38 & 7 & 6 & 1 & 84 \\
+\bottomrule
+\end{tabular}
+\end{table}

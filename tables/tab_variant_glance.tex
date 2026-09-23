@@ -1,0 +1,24 @@
+\begin{center}
+\footnotesize
+\captionof{table}{The nine TTP variants at a glance.}
+\label{tab:glance}
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}lcp{5.5cm}p{4.5cm}p{3.0cm}p{5.0cm}@{}}
+\toprule
+\textbf{Variant} & \textbf{\#} & \textbf{Dominant families} & \textbf{State of the art} & \textbf{Benchmark} & \textbf{Key open gap} \\
+\midrule
+TTP1 & 57 & Pop.-based, single-sol., hyper-heur., learning & CoCo$^+$ \citep{namazi2023solving} & Categorized 60-inst. & Shared reporting standard; real-data studies \\
+PWT & 4 & Exact, approximation, greedy & FPTAS \citep{neumann2019fully} & Derived from TTP & Chance-constrained PWT has only a greedy result \\
+TTP2 & 18 & MO-evolutionary, MORL, quantum & NDS-BRKGA \citep{chagas2021non}, WSM \citep{chagas2022weighted} & BI-TTP comp.\ suite & Learning and quantum methods on the competition suite \\
+MTTP & 1 & Constructive heuristic & Fast heuristics \citep{chand2016fast} & Reused TTP inst. & No EA/RL/QD solver; no benchmark \\
+DTTP & 3 & Pop.-based EA (dynamic) & Restart/recover EA \citep{sachdeva2020dynamic} & 72 dynamic scenarios & No learning-based solver \\
+ThOP & 8 & Swarm, approximation theory & SAAS-HC \citep{huynh2023self} & 432-inst.\ suite & No learned or hyper-heuristic solver \\
+TTPTW & 1 & Pop.-based EA & DSEA \citep{angmalisang2026traveling} & Derived (3 tightness) & No exact/approx/RL \\
+CCTTP & 2 & Surrogate, scenario heuristic & S5/C5 surrogate \citep{pathirage2024chance} & Derived (stochastic) & No population-based or learning-based solver \\
+TTP-D & 1 & Learning-based (attention DRL) $+$ MILP & MILP $+$ DRL hybrid \citep{murjani2026drive} & Two derived families & Single paper; benchmark not standardized \\
+\bottomrule
+\end{tabular}
+\vspace{2pt}
+
+\footnotesize\emph{Abbreviations used above:} EA = evolutionary algorithm; RL = reinforcement learning; MORL = multi-objective reinforcement learning; QD = quality diversity; DRL = deep reinforcement learning; MILP = mixed-integer linear programming.
+\end{center}

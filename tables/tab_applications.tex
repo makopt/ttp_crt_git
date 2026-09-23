@@ -1,0 +1,22 @@
+\begin{table}[htbp]
+\centering
+\footnotesize
+\caption{What each variant adds to the original model and the motivation its authors state, with the number of studies.}
+\label{tab:applications}
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{@{}p{1.5cm}p{5.0cm}p{8.0cm}r@{}}
+\toprule
+\textbf{Variant} & \textbf{Feature added} & \textbf{Stated motivation} & \textbf{Studies} \\
+\midrule
+TTP1, PWT & Load-dependent speed; PWT fixes the route & Benchmark for interacting components \citep{bonyadi2013travelling}; pick-up-and-delivery, waste and recyclables collection \citep{sarkar2024travelling}; last-mile cargo bikes \citep{naumov2021identifying} & 57, 4 \\
+TTP2 & Second objective, profit against time \citep{blank2017solving} & No application recorded & 18 \\
+MTTP & Several thieves sharing one capacity & Realism limit of a single thief \citep{chand2016fast} & 1 \\
+DTTP & Items or cities change during operation & Disruptions during operation \citep{sachdeva2020dynamic,herring2020dynamic,herring2020responsive} & 3 \\
+ThOP & Subset of cities within a time limit \citep{santos2018thief} & Pick-up-and-delivery logistics, per the survey \citep{sarkar2024travelling} & 8 \\
+TTPTW & Per-city time windows with waiting & No application recorded \citep{angmalisang2026traveling} & 1 \\
+CCTTP & Uncertain item weights & Measurement imprecision, environment, perishability \citep{pathirage2024chance,don2025weighted} & 2 \\
+TTP-D & Onboard drone retrieves outlying items & Application scenarios claimed \citep{murjani2026drive} & 1 \\
+\bottomrule
+\end{tabular}
+\end{table}

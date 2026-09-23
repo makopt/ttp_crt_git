@@ -1,0 +1,34 @@
+\begin{table}[htbp]
+\centering
+\footnotesize
+\caption{Reported evidence for TTP2 and ThOP methods, oldest first. \ding{108}\,yes, \ding{109}\,no. HV: hypervolume.}
+\label{tab:ttp2thop}
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{@{}p{4.4cm}p{3.1cm}ccp{6.0cm}@{}}
+\toprule
+\textbf{Method (year)} & \textbf{Tested on} & \textbf{Rival} & \textbf{Test} & \textbf{Main reported result} \\
+\midrule
+\multicolumn{5}{@{}l}{\textbf{Bi-objective TTP (TTP2)}} \\
+\cmidrule(r){1-5}
+NTGA, specialized encoding (2019) \citep{laszczyk2019specialized} & 12 instances, eil51 (51 cities) & \ding{109} & \ding{108} & Specialized encoding raises HV over NSGA-II on all 12 \\
+MO-DP, dynamic programming (2020) \citep{santana2020dynamic} & 9 competition instances & \ding{108} & \ding{109} & Close to the top three entries; HPI still leads \\
+NDS-BRKGA, non-dominated-sorting biased random-key GA (2021) \citep{chagas2021non} & 9 competition instances & \ding{108} & \ding{109} & 1st at EMO-2019 (best HV on 7 of 9), 2nd at GECCO-2019 \\
+NTGA2, second non-dominated tournament GA (2021) \citep{myszkowski2021diversity} & 12 instances, eil51 & \ding{108} & \ding{108} & Best HV (+0.72\% over NTGA); 3rd at GECCO-2019 \\
+MOACO-PW, multi-objective ant colony (2021) \citep{yang2021moea} & Small custom set; competition instances & \ding{108} & \ding{109} & Beats its baselines on 6 of 9 competition instances; baseline values quoted \\
+WSM, weighted-sum method (2022) \citep{chagas2022weighted} & About 960 instances; competition instances & \ding{108} & \ding{108} & Better than NDS-BRKGA on 82.2\% of instances, worse on 15\% \\
+MOFECO-MS, five-element cycle optimization (2024) \citep{xiang2024multi} & 9 instances, up to 280 cities & \ding{109} & \ding{109} & Best HV among 8 general-purpose metaheuristics \\
+MORL, multi-objective reinforcement learning (2024) \citep{santiyuda2024solving} & 10 graphs, up to 1,379 cities & \ding{108} & \ding{108} & Competitive with NDS-BRKGA only on many-item instances, but far faster \\
+QA, quantum annealing (2026) \citep{viet2026advanced} & 6 instances, up to 280 cities & \ding{109} & \ding{109} & Up to 9 times faster than classical MOEAs at similar HV \\
+\midrule
+\multicolumn{5}{@{}l}{\textbf{Thief Orienteering Problem (ThOP), all on the same 432-instance suite}} \\
+\cmidrule(r){1-5}
+ILS, iterated local search, and BRKGA (2018) \citep{santos2018thief} & 432 instances & \ding{109} & \ding{109} & BRKGA is better than ILS on most instances \\
+thopGA, genetic algorithm (2020) \citep{faeda2020genetic} & 432 instances & \ding{108} & \ding{108} & Best on 304 of 432; baselines quoted from another machine \\
+ACO, ant colony optimization (2020) \citep{chagas2020ants} & 432 instances & \ding{108} & \ding{108} & Better than ILS and BRKGA on 410 to 419 of 432 \\
+ACO++, improved ACO (2022) \citep{chagas2022efficiently} & 432 instances & \ding{108} & \ding{108} & Better on at least 96\% of instances \\
+SAAS-HC, self-adaptive ant system (2023) \citep{huynh2023self} & 432 instances & \ding{108} & \ding{108} & Best known on 330 instances (ACO++: 180); vs ACO++: 176 better, 170 worse \\
+PTAS, approximation scheme (2023, 2024) \citep{bloch2023polynomial,bloch2024thief} & Theory only & -- & -- & PTAS on acyclic and series-parallel graphs; in general no constant-factor approximation unless P $=$ NP \\
+\bottomrule
+\end{tabular}
+\end{table}

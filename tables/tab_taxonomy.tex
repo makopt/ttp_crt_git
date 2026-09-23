@@ -1,0 +1,36 @@
+\begin{center}
+\footnotesize
+\captionof{table}{Consolidated taxonomy of the TTP variants.}
+\label{tab:taxonomy}
+\begin{flushleft}
+\textbf{Legend: each dimension below and the values it can take.}
+\end{flushleft}
+\begin{tabular}{@{}p{3.0cm}p{16.3cm}@{}}
+\textbf{Objective structure} & single-objective; bi-objective (travel time vs.\ profit)\\
+\textbf{Route structure} & fixed route; full tour (all cities); selective routing (subset of cities)\\
+\textbf{Timing constraint} & unconstrained; per-city time windows; global time budget; epoch-based disruption; drone flight synchronization\\
+\textbf{Agent multiplicity} & single thief; multiple cooperative thieves (shared capacity); vehicle $+$ drone\\
+\textbf{Knapsack uncertainty} & deterministic weights; stochastic weights under a chance constraint\\
+\textbf{Problem dynamics} & static instance; dynamic instance (item/city toggling, recovery)\\
+\textbf{Value model} & fixed item profits; time-decaying profits with a per-item drop rate\\
+\textbf{Cost / tradeoff model} & time-renting (profit $-$ $R\cdot$time); value-drop-rate; global-time-budget\\
+\textbf{Speed--weight law} & linear decrease with load; linear or constant (ThOP theory; load-dependent for TTP-D)\\
+\end{tabular}\\[6pt]
+\centering
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}lp{1.35cm}p{1.35cm}p{2.5cm}p{2.5cm}p{2.5cm}p{1.0cm}p{1.35cm}p{1.55cm}p{1.55cm}cp{2.0cm}@{}}
+\toprule
+\textbf{Variant} & \textbf{Obj.} & \textbf{Route} & \textbf{Timing} & \textbf{Agents} & \textbf{KP unc.} & \textbf{Dyn.} & \textbf{Value} & \textbf{Cost model} & \textbf{Speed law} & \textbf{Period} & \textbf{Ref. (oldest--newest)} \\
+\midrule
+\textbf{TTP1} & Single-objective & Full tour (all cities) & Unconstrained & Single thief & Deterministic & Static & Fixed profits & time-renting & linear & 2013--2026 & \citet{bonyadi2013travelling}; \citet{eube2026approximation} \\
+\textbf{PWT} & Single-objective & Fixed route & Unconstrained & Single thief & Deterministic & Static & Fixed profits & time-renting & linear & 2015--2026 & \citet{polyakovskiy2015packing}; \citet{don2026greedy} \\
+\textbf{TTP2} & Bi-objective (time vs profit) & Full tour & Unconstrained & Single thief & Deterministic & Static & Time-decaying profits (drop rate) & value-drop-rate & linear & 2013--2026 & \citet{bonyadi2013travelling}; \citet{viet2026advanced} \\
+\textbf{MTTP} & Single-objective & Full tour & Unconstrained & Multiple cooperative thieves (shared capacity) & Deterministic & Static & Fixed profits & time-renting & linear & 2016 & \citet{chand2016fast} \\
+\textbf{DTTP} & Single- and bi-objective & Full tour & Epoch-based disruption & Single thief & Deterministic & Dynamic (item/city toggling) & Fixed profits & time-renting & linear & 2020 & \citet{sachdeva2020dynamic} \\
+\textbf{ThOP} & Single-objective & Selective routing (subset of cities) & Global time budget & Single thief & Deterministic & Static & Fixed profits & global-time-budget & linear/constant & 2018--2025 & \citet{santos2018thief}; \citet{bloch2025algorithms} \\
+\textbf{TTPTW} & Single-objective & Full tour & Per-city time windows + mandatory wait & Single thief & Deterministic & Static & Fixed profits & time-renting & linear & 2026 & \citet{angmalisang2026traveling} \\
+\textbf{CCTTP} & Single-objective & Full tour & Unconstrained & Single thief & Stochastic weights (chance constraint) & Static & Fixed profits & time-renting & linear & 2024--2025 & \citet{pathirage2024chance}; \citet{don2025weighted} \\
+\textbf{TTP-D} & Single-objective & Full vehicle tour + drone sorties & Flight synchronization (drone launch/rendezvous) & Vehicle + drone (two cooperating agents) & Deterministic & Static & Fixed profits & time-renting & linear (load-dep.) & 2026 & \citet{murjani2026drive} \\
+\bottomrule
+\end{tabular}
+\end{center}

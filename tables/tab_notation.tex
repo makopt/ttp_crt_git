@@ -1,0 +1,24 @@
+\begin{table}[htbp]
+\centering
+\footnotesize
+\caption{Notation for the TTP1 model used throughout the paper.}
+\label{tab:notation}
+\begin{tabular}{@{}ll@{}}
+\toprule
+\textbf{Symbol} & \textbf{Meaning} \\
+\midrule
+$n$ & number of cities in the TSP component \\
+$d_{ij}$ & distance between cities $i$ and $j$ \\
+$\pi=(1,\pi_2,\dots,\pi_n,1)$ & the closed tour of the thief (1 denotes the starting and ending city) \\
+$m_i$ & number of items offered at city $\pi_i$ \\
+$p_{ik},\,w_{ik}$ & profit and weight of item $k$ at city $\pi_i$ \\
+$x_{ik}\in\{0,1\}$ & packing plan: $1$ if item $k$ at city $\pi_i$ is taken, 0 otherwise \\
+$C$ & knapsack capacity ($\sum w_{ik}x_{ik}\le C$) \\
+$W$ & accumulated weight carried after a city \\
+$\vmax,\,\vmin$ & speed of the empty and the full knapsack \\
+$v(W)=\vmax-\tfrac{W}{C}(\vmax-\vmin)$ & load-dependent travel speed \\
+$R$ & renting rate charged per unit of travel time \\
+$t(\pi,x)$ & total travel time; objective $\sum p_{ik}x_{ik}-R\,t(\pi,x)$ \\
+\bottomrule
+\end{tabular}
+\end{table}

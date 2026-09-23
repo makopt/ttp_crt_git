@@ -1,0 +1,49 @@
+% Roadmap of the seven recommendations, by tier, with the finding behind each.
+\begin{figure}[htbp]
+\centering
+\resizebox{0.9\textwidth}{!}{%
+\begin{tikzpicture}[
+  font=\footnotesize, >={Stealth[length=2.2mm]},
+  ban/.style={draw=none,rounded corners=3pt,align=center,inner sep=4pt,
+              minimum height=0.9cm,text width=4.3cm,font=\bfseries\footnotesize},
+  rec/.style={draw=black!45,line width=0.7pt,rounded corners=4pt,align=left,
+              inner sep=5pt,text width=4.25cm,minimum height=2.45cm,font=\footnotesize},
+  badge/.style={circle,draw=none,fill=black!70,text=white,font=\bfseries\scriptsize,
+                minimum size=0.55cm,inner sep=0pt},
+  flow/.style={->,line width=1.5pt,black!90},
+  dep/.style={->,line width=1.1pt,black!55,dashed},
+]
+\node[ban,fill=VarTTP1!55]  (b1) at (0,0)    {Adopt now\\[-1pt]\normalfont\scriptsize agreement and tooling};
+\node[ban,fill=FigAmber!45] (b2) at (5.9,0)  {Build\\[-1pt]\normalfont\scriptsize shared infrastructure};
+\node[ban,fill=VarPWT!45]   (b3) at (11.8,0) {Research\\[-1pt]\normalfont\scriptsize new work};
+\draw[flow] (b1.east) -- (b2.west);
+\draw[flow] (b2.east) -- (b3.west);
+
+\node[rec,fill=VarTTP1!22] (r1) at (0,-2.15) {\textbf{Minimum reporting standard}\\[2pt]
+  \textbf{19} of 93 studies report dispersion, \textbf{26} release code, and \textbf{35} report a test};
+\node[rec,fill=VarTTP1!22] (r2) at (0,-4.8) {\textbf{Fixed comparison protocol per variant}\\[2pt]
+  Rankings depend on the pool, and TTP2 baselines are \textbf{quoted or re-run} under unequal budgets};
+\node[rec,fill=VarTTP1!22] (r3) at (0,-7.45) {\textbf{Permanent archives} for instances, best-known values, and code\\[2pt]
+  The ThOP address is dead, and \textbf{1 of 15} code links fails};
+\node[rec,fill=FigAmber!22,minimum height=3.3cm] (r4) at (5.9,-4.8) {\textbf{Shared benchmarks} for the variants without one\\[2pt]
+  \textbf{5} variants have no shared suite, and \textbf{52 of 93} studies use one-off or self-generated instances};
+\node[rec,fill=VarPWT!22] (r5) at (11.8,-2.15) {\textbf{Fill the algorithm--variant gaps}, including learning and quantum methods\\[2pt]
+  Only \textbf{11 of 56} combinations are covered outside TTP1 and TTP2};
+\node[rec,fill=VarPWT!22] (r6) at (11.8,-4.8) {\textbf{Test on real logistics data}\\[2pt]
+  \textbf{No} study records an evaluation on real data};
+\node[rec,fill=VarPWT!22] (r7) at (11.8,-7.45) {\textbf{Settle the open theory} for the newer variants\\[2pt]
+  \textbf{No} hardness or approximation result for 5 variants};
+
+\foreach \n/\x/\y in {1/0/-2.15,2/0/-4.8,3/0/-7.45,4/5.9/-4.8,5/11.8/-2.15,6/11.8/-4.8,7/11.8/-7.45}
+  \node[badge] at ($(\x,\y)+(-2.1,1.22)$) {R\n};
+
+\draw[dep] (r1.east) -- ++(0.6,0) |- (r4.north west);
+\draw[dep] (r2.east) -- (r4.west);
+\draw[dep] (r3.east) -- ++(0.6,0) |- (r4.south west);
+\draw[dep] (r4.east) -- (r6.west);
+\draw[dep] (r4.north east) |- (r5.west);
+\draw[dep] (r4.south east) |- (r7.west);
+\end{tikzpicture}}
+\caption{Roadmap of the seven recommendations, by tier, with the finding that motivates each. Dashed arrows show dependencies.}
+\label{fig:agenda}
+\end{figure}

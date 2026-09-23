@@ -1,0 +1,41 @@
+%% Compiles the four TikZ figures of the paper:
+%%   pdflatex tikz_figures.tex
+%% The figure files are the same ones the paper inputs. Citations in captions
+%% are replaced by plain brackets so that no bibliography is needed.
+\documentclass[a4paper,11pt]{article}
+\usepackage[margin=2cm]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{tikz}
+\usetikzlibrary{positioning,arrows.meta,shapes.geometric,calc,fit,backgrounds}
+
+\newcommand{\vmax}{v_{\max}}
+\newcommand{\vmin}{v_{\min}}
+\newcommand{\citep}[1]{[#1]}
+\newcommand{\citet}[1]{[#1]}
+
+% palette shared with scripts/gen_figures.py
+\definecolor{NavyHeader}{RGB}{31,56,100}
+\definecolor{NavyLight}{RGB}{217,225,242}
+\definecolor{BrickRed}{RGB}{178,58,72}
+\definecolor{SeaTeal}{RGB}{60,141,122}
+\definecolor{VarTTP1}{HTML}{8DA0CB}
+\definecolor{VarPWT}{HTML}{66C2A5}
+\definecolor{VarTTP2}{HTML}{FC8D62}
+\definecolor{VarMTTP}{HTML}{FFD92F}
+\definecolor{VarDTTP}{HTML}{A6D854}
+\definecolor{VarThOP}{HTML}{7FCDCD}
+\definecolor{VarTTPTW}{HTML}{E78AC3}
+\definecolor{VarCCTTP}{HTML}{B399D4}
+\definecolor{VarTTPD}{HTML}{E5998F}
+\definecolor{FigAmber}{HTML}{F0C239}
+\definecolor{FigGrayBg}{HTML}{F1F3F5}
+
+\begin{document}
+\input{fig_anatomy.tex}
+\input{fig_prisma.tex}
+\input{fig_taxonomy_dag.tex}
+\input{fig_agenda.tex}
+\end{document}

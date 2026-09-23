@@ -1,0 +1,33 @@
+% Schematic: the tour--packing feedback loop that defines the TTP.
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[
+  font=\small, >={Stealth[length=2mm]},
+  comp/.style={draw=VarTTP1!55!black,line width=0.9pt,fill=VarTTP1!35,
+               rounded corners=3pt,align=center,inner sep=5pt,minimum width=3.1cm},
+  stp/.style={draw=FigAmber!55!black,fill=FigAmber!20,rounded corners=2pt,align=center,
+               inner sep=4pt,font=\footnotesize,minimum width=2.5cm},
+  obj/.style={draw=VarThOP!50!black,line width=1pt,fill=VarThOP!50,text=black,
+              rounded corners=3pt,align=center,inner sep=5pt},
+  k/.style={->,line width=0.9pt,black!55},
+  fk/.style={->,line width=1.2pt,VarTTPD!60!black},
+]
+\node[comp] (tsp) at (0,1.4)  {\textbf{TSP component}\\route $\pi$};
+\node[comp] (kp)  at (0,-1.4) {\textbf{KP component}\\packing plan $x$, capacity $C$};
+\node[stp] (w)  at (4.2,-1.4) {carried weight\\$W(\pi,x)$};
+\node[stp] (v)  at (8.1,-1.4) {speed $v(W)\!\downarrow$\\$\vmax-\tfrac{W}{C}(\vmax-\vmin)$};
+\node[stp] (t)  at (8.1,1.4)  {travel time\\and cost $R\,t\;\uparrow$};
+\node[obj]  (g)  at (8.1,3.4)  {maximize\\$\sum p_{ik}x_{ik}-R\,t$};
+
+\draw[k] (tsp) -- node[right,align=left,font=\scriptsize,text=black!55]
+  {when items are available;\\how far they are carried} (kp);
+\draw[k] (kp) -- (w);
+\draw[fk] (w) -- (v);
+\draw[fk] (v) -- (t);
+\draw[k]  (t) -- (g);
+\draw[fk] (t.west) to[out=175,in=5] node[above,align=center,font=\scriptsize,text=VarTTPD!60!black]
+  {a heavier load slows the whole tour} (tsp.east);
+\end{tikzpicture}
+\caption{Anatomy of the Traveling Thief Problem: the tour--packing feedback loop.}
+\label{fig:anatomy}
+\end{figure}

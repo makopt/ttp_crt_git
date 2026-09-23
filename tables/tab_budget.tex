@@ -1,0 +1,27 @@
+\begin{table}[htbp]
+\centering
+\footnotesize
+\caption{Time budget, run count, and hardware or language for the nine RDI-pool methods, as stated in the source paper for the values used in Table~\ref{tab:rdi} (Section~\ref{sec:performance}).}
+\label{tab:budget}
+\begin{threeparttable}
+\begin{tabular}{@{}llccl@{}}
+\toprule
+\textbf{Algorithm} & \textbf{Ref.} & \textbf{Budget} & \textbf{Runs} & \textbf{Hardware / language} \\
+\midrule
+CoCo+ & \citet{namazi2023solving} & 600s (+1h robustness check) & 10 & Not stated \\
+CoCo & \citet{namazi2019cooperative} & 600s & 10 & Intel Xeon X5650 2.66GHz \\
+CS2SA & \citet{el2016population} & 600s & 10 & Core i3-2370M 2.40GHz/4GB, Java \\
+MA2B & \citet{el2016population} & 600s & 10 & Core i7-5700HQ 2.70GHz/8GB, Java \\
+CS2SA* & \citet{el2018efficiently} & 600s & 10 & Java \\
+RWS & \citet{zhang2021solving} & 600s & 10 & Not stated \\
+SAVI & \citet{nguyen2023simulated} & 600s & 10 & AMD Ryzen 7 5800U 1.9GHz, Java \\
+S5 & \citet{faulkner2015approximate}\tnote{a} & 600s & 10 & Not stated \\
+MATLS & \citet{mei2014improving}\tnote{a} & 600s & 10 & Not stated \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}
+\footnotesize
+\item[a] Re-evaluated by \citet{zhang2021solving} under its own protocol (Section~\ref{sec:performance}), not the original authors' protocol.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

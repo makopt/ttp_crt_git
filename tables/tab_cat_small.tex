@@ -1,0 +1,32 @@
+\begin{center}
+\footnotesize
+\captionof{table}{Catalog of PWT, MTTP and DTTP, and ThOP contributions.}
+\label{tab:cat_small}
+\begin{tabular}{@{}p{2.8cm}cp{3.0cm}p{4.9cm}p{7.9cm}@{}}
+\toprule
+\textbf{Reference} & \textbf{Year} & \textbf{Algorithm} & \textbf{Instances} & \textbf{Key result} \\
+\midrule
+\multicolumn{5}{l}{\textbf{PWT} (4 papers)} \\ \midrule
+\citet{polyakovskiy2015packing} & 2015 & PWT MIP & eil51/76/101 (small) and pla33810/85900 (large), 3 KP types & Exact MIP is optimal only on small instances; a fast heuristic is near-optimal on large ones. \\
+\citet{polyakovskiy2017packing} & 2017 & PWT exact (NP-hardness) & Same small and large TSP bases as polyakovskiy\allowbreak{}2015packing & Pre-processing removes 19-32\% of items; a fast heuristic solves pla85900 in about 4 hours. \\
+\citet{neumann2019fully} & 2019 & FPTAS (PWT) & 27 mid-size instances plus a large-range synthetic set & The FPTAS reaches a 100\% approximation ratio and is far faster than the exact baselines. \\
+\citet{don2026greedy} & 2026 & Greedy PACK + HH & 300 PWT instances: 10 TSP bases x 30 random fixed tours & A hyper-heuristic beats the individual greedy scoring rules on most instances. \\
+\midrule
+\multicolumn{5}{l}{\textbf{MTTP and DTTP} (4 papers)} \\ \midrule
+\citet{chand2016fast} & 2016 & MTTP fast heuristic & 72 instances, the same subset used by faulkner2015\allowbreak{}approximate & Two thieves is the sweet spot; MTTP beats the best single-thief TTP solver by 50-100\%. \\
+\citet{herring2020dynamic} & 2020 & DMOTTP EA & 4 TSP bases (52-2319 cities) x 3 knapsack categories & A solver-based restart strategy gives the best hypervolume overall. \\
+\citet{herring2020responsive} & 2020 & DTTP responsive EA & 6 TSP bases (52-318 cities) x 3 knapsack categories, city-location dynamics & Migrating the population after a disruption beats simple re-seeding on most generations. \\
+\citet{sachdeva2020dynamic} & 2020 & DTTP EA & 9 instances from a280/fnl4461/pla33810, 72 disruption scenarios & Restarting works best after item disruptions; recovering in place works best for cities. \\
+\midrule
+\multicolumn{5}{l}{\textbf{ThOP} (8 papers)} \\ \midrule
+\citet{santos2018thief} & 2018 & ILS / BRKGA (ThOP) & 432 instances: 4 TSP bases x item, capacity, and time-budget levels & BRKGA gives the most stable convergence overall; ILS wins only on the smallest instances. \\
+\citet{chagas2020ants} & 2020 & ACO (ThOP) & The 432-instance benchmark of santos2018thief & The ACO variants beat the prior best on 95\% of instances, a 320\% average profit gain. \\
+\citet{faeda2020genetic} & 2020 & thopGA & The 432-instance benchmark of santos2018thief & thopGA wins on over 70\% of instances and converges more stably than BRKGA. \\
+\citet{chagas2022efficiently} & 2022 & ACO++ & The 432-instance benchmark plus 36 derived Orienteering Problem instances & ACO++ matches or beats ILS, BRKGA, GA, and ACO on almost every instance. \\
+\citet{bloch2023polynomial} & 2023 & PTAS (DAG ThOP) & Theoretical (no instances) & First PTAS for ThOP on directed acyclic graphs, plus an FPTAS on restricted classes. \\
+\citet{huynh2023self} & 2023 & SAAS-HC & The 432-instance benchmark of santos2018thief & SAAS-HC matches the quality of ACO++ using one parameter set instead of 48 tuned sets. \\
+\citet{bloch2024thief} & 2024 & series-parallel theory & Theoretical (no instances) & A series-parallel graph transformation extends the ThOP hardness and approximation results. \\
+\citet{bloch2025algorithms} & 2025 & FPTAS (ThOP) & Theoretical (no instances) & FPTAS for ThOP on constant-speed and clique-structured graph classes. \\
+\bottomrule
+\end{tabular}
+\end{center}

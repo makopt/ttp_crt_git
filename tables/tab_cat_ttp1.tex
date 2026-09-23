@@ -1,0 +1,78 @@
+{\footnotesize
+\begin{longtable}{@{}p{2.8cm}cp{3.0cm}p{4.9cm}p{7.9cm}@{}}
+\caption{Catalog of TTP1 contributions, grouped by the four sub-epochs of Section~\ref{sec:lit_core}.}\\\label{tab:cat_ttp1}\\
+\toprule
+\textbf{Reference} & \textbf{Year} & \textbf{Algorithm} & \textbf{Instances} & \textbf{Key result} \\
+\midrule
+\endfirsthead
+\multicolumn{5}{l}{\footnotesize\itshape Table~\ref{tab:cat_ttp1} continued}\\ \toprule
+\textbf{Reference} & \textbf{Year} & \textbf{Algorithm} & \textbf{Instances} & \textbf{Key result} \\
+\midrule
+\endhead
+\midrule \multicolumn{5}{r}{\footnotesize continued on next page}\\
+\endfoot
+\bottomrule
+\endlastfoot
+\midrule \multicolumn{5}{l}{\textbf{Foundations and benchmarking, 2013--2015} (10 papers)} \\ \midrule
+\citet{bonyadi2013travelling} & 2013 & RLS / EA baseline & Introduces the problem, no benchmark yet & Defines the TTP and gives the first RLS and EA baselines. \\
+\citet{bonyadi2014socially} & 2014 & CoSolver, DH & 45 self-generated instances, 3--33 cities & CoSolver beats the sequential DH baseline, and the advantage grows with the rent rate. \\
+\citet{mei2014improving} & 2014 & MATLS & 6 large instances, 11{,}849--33{,}810 cities & MATLS is positive where RLS and EA are negative on every large instance. \\
+\citet{polyakovskiy2014comprehensive} & 2014 & SH, S1--S5, C1--C6, RLS, EA & Builds the 9{,}720-instance benchmark & Establishes the standard benchmark and the scoring and iterative heuristics used as baselines since. \\
+\citet{beham2015optimization} & 2015 & HeuristicLab MA & berlin52-based TTP, KCPTP, and OP instances & A variegation operator significantly improves solution quality across all three problem types. \\
+\citet{el2015cosolver2b} & 2015 & CoSolver2B & 16 uncorrelated-similar-weight instances, 52--33{,}810 cities & CoSolver2B-bestfit beats EA and RLS on most instances but times out on the largest. \\
+\citet{faulkner2015approximate} & 2015 & S1--S5, C1--C6 & 72-instance representative subset & Establishes S5 as the dominant simple baseline, especially on bounded-strongly-correlated instances. \\
+\citet{gupta2015greedy} & 2015 & G1 / G2 & Full 9{,}720-instance benchmark & G1 and G2 beat the SH scoring baseline on almost every instance. \\
+\citet{mei2015heuristic} & 2015 & GAIN / PICKFUNC (GP) & 6 large TSPLIB bases, up to 33{,}810 cities & GP-evolved heuristics match a hand-designed heuristic and beat RLS and EA on every test instance. \\
+\citet{strzezek2015divergene} & 2015 & DiverGene & berlin52 & A dissimilarity-aware selection operator improves the objective, most on the hardest (TTP) of the three problems tested. \\
+\midrule \multicolumn{5}{l}{\textbf{Coordinated search, 2016--2019} (23 papers)} \\ \midrule
+\citet{el2016population} & 2016 & MA2B & 20 TSPLIB bases $\times$ 3 categories & MA2B wins on small and mid-size instances; S5 and CS2SA win on Category~1 and on large instances. \\
+\citet{lourencco2016evolutionary} & 2016 & EA & eil51, eil76, kroA100 & The EA beats a sequential density-heuristic baseline on 4 of 6 instances; TTP-optimal tours differ substantially from TSP-optimal ones. \\
+\citet{mei2016investigation} & 2016 & Cooperative co-evolution & 39 self-generated instances, up to 100 cities & Confirms the objective cannot be cleanly separated; a plain memetic algorithm still beats every coevolution variant. \\
+\citet{wagner2016stealing} & 2016 & MMAS / ACO & Over 1{,}100 instances, up to 1{,}000 cities & MMAS wins on small and medium instances; S5 dominates on the largest. \\
+\citet{wu2016impact} & 2016 & Renting-rate analysis & Theoretical, no benchmark & Only a few renting-rate values yield genuinely hard instances; gives a constructed instance where a (1+1)~EA provably fails. \\
+\citet{el2017local} & 2017 & JNB / J2B & 180 instances, 51--1{,}304 cities & JNB and J2B beat EA and RLS on small and medium instances; tour initialization matters far more than packing initialization. \\
+\citet{karder2017solving} & 2017 & Switchover LS & 60 berlin52-based instances & Switchover and SASEGASA find a new best on 59 of 60 instances. \\
+\citet{martins2017hseda} & 2017 & HSEDA & 135 instances, 59\% of the benchmark by city count & HSEDA's edge over MMAS and S5 grows with city count. \\
+\citet{moeini2017hybrid} & 2017 & Hybrid heuristic & 40 instances, eil51 and eil76 classes & The hybrid EA improves several eil51 best-known values but is mostly worse on eil76. \\
+\citet{vieira2017genetic} & 2017 & MCGA & 36-instance subset of \citet{faulkner2015approximate} & MCGA wins on 56\% of instances, mainly the smaller bases; S5 wins on the largest. \\
+\citet{wu2017exact} & 2017 & Branch-and-bound, DP, CP & 432 exactly-solved instances, up to 20 cities & MA2B is closest to optimal overall; strongly-correlated instances are the hardest for every heuristic. \\
+\citet{alharbi2018design} & 2018 & mod-ABC & eil51 and eil76, all three KP types & mod-ABC beats the density and greedy baselines on every instance but degrades with more items per city. \\
+\citet{alharbi2018hybrid} & 2018 & GATS & 540 instances from the standard benchmark & GATS beats EA and RLS at every capacity level except on one TSP base. \\
+\citet{araujo2018novel} & 2018 & LCRVND (GPU) & 60 instances from \citet{bonyadi2013travelling} & GPU-accelerated LCRVND reaches the literature's target faster on 54 of 60 instances. \\
+\citet{el2018efficiently} & 2018 & CS2SA / CS2SA$^\ast$ & 20 TSPLIB bases $\times$ 3 categories & CS2SA$^\ast$ wins on most mid and large instances; S5 still wins Category~1. \\
+\citet{el2018hyperheuristic} & 2018 & GPHS$^\ast$ & 51--783 cities, all three KP types & GPHS$^\ast$ significantly beats S5 and MA2B on several mid-size instances. \\
+\citet{nieto2018guided} & 2018 & RES\_GLS & 12 instances, 52--4{,}461 cities & RES\_GLS finds 3 new best-known values, concentrated on the smaller instances. \\
+\citet{przybylek2018decomposition} & 2018 & CoSolver-H, MCTS, ACO & Generated and TSPLIB-derived instances & CoSolver-H never produces a bad solution and gives the best average gain of the three decompositions. \\
+\citet{wagner2018case} & 2018 & Algorithm selection & Portfolio of existing TTP1 solvers & The best selectors close 90\% of the single-best-oracle gap; CS2SA has the highest marginal contribution despite the lowest standalone performance. \\
+\citet{ali2019novel} & 2019 & BMV-DE & 13 TTP instances derived from TSPLIB & BMV-DE gives the lowest average error of the compared methods. \\
+\citet{namazi2019cooperative} & 2019 & CoCo (PGCH, SGCH, LGCH, MBFS) & Categorized 60-instance benchmark & Establishes CoCo as the new state of the art on the categorized benchmark. \\
+\citet{namazi2019profit} & 2019 & PGCH & Categorized 60-instance benchmark & The joint reversal-and-reassignment move consistently beats plain 2-opt. \\
+\citet{zouari2019new} & 2019 & CMMACS, OMMACS, DMMACS & 10 bounded-strongly-correlated a280 instances & The online variant OMMACS outperforms both the centralized and the distributed variant. \\
+\midrule \multicolumn{5}{l}{\textbf{Surrogate, diversity, and learning-inspired methods, 2020--2022} (11 papers)} \\ \midrule
+\citet{ali2020differential} & 2020 & DB-DE & 13 hard strongly-correlated instances & DB-DE ranks second in objective and first in runtime, saving over 90\% of the time budget. \\
+\citet{ali2020hyper} & 2020 & SR-IO, KAB-IO, RD-MSA, RPD-MSA & 9 instances, eil51, eil76, a280 & The proposed hyper-heuristics win on eil51 and eil76; the prior state of the art still wins on a280. \\
+\citet{maity2020efficient} & 2020 & Hybrid local search & 28 TSPLIB bases $\times$ 3 categories & Best on Category~1; MATLS and CS2SA remain better on Categories~2 and~3. \\
+\citet{namazi2020surrogate} & 2020 & CoCo-SM (SVR) & 96 medium and large instances & The surrogate filters 30\% of initial tours at the cost of one missed best in ten runs, saving 30\% of solver time. \\
+\citet{ali2021novel} & 2021 & ESA & Large-instance subset, 76--33{,}810 cities & Reports very large gains over S5 and CS2SA, large enough that an objective-scaling discrepancy is likely. \\
+\citet{bossek2021generating} & 2021 & Evolved instances & Theoretical, instance-generation study & Generates instances with a controllable, portfolio-dependent performance gap between algorithms. \\
+\citet{misir2021benchmark} & 2021 & Benchmark analysis & Subsets of the 9{,}720-instance benchmark & Most reduced subsets preserve over 90\% of the full benchmark's algorithm ranking. \\
+\citet{naumov2021identifying} & 2021 & Cargo-bike CVRP & Last-mile delivery case study, not the standard benchmark & A CVRP formulation reaches the same quality as competing formulations but converges far faster. \\
+\citet{zhang2021solving} & 2021 & RWS & Categorized 60-instance benchmark & RWS is strongest on Category~C, where capacity is high and items are uncorrelated. \\
+\citet{nikfarjam2022coevolutionary} & 2022 & Co-EA (QD + EDO) & 18 instances, eil51, pr152, a280 & Co-EA beats standard evolutionary diversity optimization on structural entropy on 14 of 18 instances. \\
+\citet{nikfarjam2022evolutionary} & 2022 & EDO (entropy) & 18 instances, eil51, pr152, a280 & A combined edge-and-item diversity measure gives the best overall diversity. \\
+\midrule \multicolumn{5}{l}{\textbf{Modern paradigms and new theory, 2023--2026} (13 papers)} \\ \midrule
+\citet{namazi2023solving} & 2023 & CoCoP / CoCoL (CoCo$^+$) & Categorized 60-instance benchmark & Sets new best-known values on most mid and large instances; the strongest method on the categorized benchmark to date. \\
+\citet{nguyen2023simulated} & 2023 & SAVI & Categorized 60-instance benchmark & Competitive overall but the weakest of the nine pool methods on Category~A. \\
+\citet{rodriguez2023sequence} & 2023 & Sequence-based hyper-heuristic & 60 self-generated 5-city instances & Trained hyper-heuristic sequences beat random sequences and generalize across correlation levels; the standard benchmark is not used. \\
+\citet{ni2024leveraging} & 2024 & Symbolic-regression initialization & 450 instances from the standard benchmark & The symbolic-regression initializer ranks first on about 80\% of instances with fewer objective evaluations. \\
+\citet{nikfarjam2024use} & 2024 & BMBEA (QD, journal) & 18 main plus 27 extended large-scale instances & Gives the highest mean on most instances and improves the best-known value on two large instances. \\
+\citet{wu2024reinforcens} & 2024 & ReinforceNS & 60-instance benchmark plus 18 GECCO-2023 competition instances & Reports twelve new best-known results and beats CoCo on 38 of 60 instances. \\
+\citet{xiang2024five} & 2024 & FECOIMO & 39 self-generated instances & Ranks first by Friedman test on all three statistics tried; the standard benchmark is not used. \\
+\citet{pathirage2025evolutionary} & 2025 & Multitasking EA & 10 instances, 5 TSP bases $\times$ 2 KP types & The multitasking advantage concentrates under tight time budgets and on larger instances. \\
+\citet{zhang2025two} & 2025 & ICA + GACO & Small-instance subset, 51--280 cities & GACO-GISS beats a Lin-Kernighan-based baseline despite producing longer tours, confirming TTP-aware routing helps. \\
+\citet{eube2026approximation} & 2026 & Bi-criteria approximation & Theoretical, no instances & Gives the first approximation algorithm for TTP1, a polynomial-time bi-criteria Pareto set and a Weighted-TSP approximation. \\
+\citet{eube2026effective} & 2026 & Weighted-TSP DP / approximation & 25 instances, eil51-based plus two larger bases & The exact DP is never worse than S5 and improves the objective by 13.6\% on average. \\
+\citet{kapancioglu2026formulations} & 2026 & MILP formulations & 62 generated plus a benchmark subset & Finds new optimal values for 15 benchmark instances, including two with over 50 nodes. \\
+\citet{tran2026integrating} & 2026 & ACO-RSA & TSPLIB bases plus the categorized A/B/C set & Competitive on small and medium instances; S5 and SAVI still win on the largest. \\
+\end{longtable}
+}

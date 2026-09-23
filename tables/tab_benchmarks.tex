@@ -1,0 +1,30 @@
+\begin{table}[htbp]
+\centering
+\footnotesize
+\caption{Benchmark instances available for each variant (No: no public release reported).}
+\label{tab:benchmarks}
+\setlength{\tabcolsep}{4pt}
+\begin{threeparttable}
+\begin{tabular}{@{}lp{10.0cm}cp{3.5cm}@{}}
+\toprule
+\textbf{Variant} & \textbf{Benchmark instances} & \textbf{Online?} & \textbf{Reference} \\
+\midrule
+TTP1 & Standard suite: 9,720 instances from 81 TSPLIB graphs (51--85,900 cities); the categorized 60-instance subset (Category A/B/C) is the common evaluation ground. Two smaller sets support theory work: 432 instances with known optima, and 720 instances evolved to discriminate between algorithms. & Partial\tnote{a} & \citet{polyakovskiy2014comprehensive}; \citet{wu2017exact}; \citet{bossek2021generating} \\
+PWT & Reuses the TTP1 standard suite, since PWT is a fixed-route restriction of TTP1; no separate instances exist. & Yes\tnote{c} & \citet{polyakovskiy2014comprehensive} \\
+TTP2 & The BI-TTP competition suite: 9 instances selected from the TTP1 standard suite (EMO-2019 / GECCO-2019, cities 280--33{,}810); a 12-instance eil51-based set is separately reused by three papers, and some studies instead adapt the full TTP1 standard suite. & Yes\tnote{c} & \citet{polyakovskiy2014comprehensive}; \citet{chagas2021non} \\
+MTTP & No shared suite; the sole paper reuses a 72-instance subset of the standard suite originally selected for approximation studies. & Yes\tnote{c} & \citet{chand2016fast} \\
+DTTP & No shared suite; each of the three papers adds disruption scenarios to a reused subset of the standard or competition suites (9, 12, and 18 base instances respectively). & Partial\tnote{b} & \citet{sachdeva2020dynamic}; \citet{herring2020dynamic}; \citet{herring2020responsive} \\
+ThOP & A dedicated 432-instance suite (cities \textasciitilde{}50--280), used by every ThOP paper to date, the only frontier variant with this level of adoption. & Partial\tnote{d} & \citet{santos2018thief} \\
+TTPTW & A single derived set at three time-window tightness levels (cities 51--1000); not yet reused by a second paper. & No & \citet{angmalisang2026traveling} \\
+CCTTP & A single derived set of uniform-weight scenarios at confidence levels up to 0.999 (cities 51--1000); later chance-constrained studies build on the same setting but do not yet share one standardized suite. & No & \citet{pathirage2024chance} \\
+TTP-D & Two derived instance families from a single paper, one MILP-scale and one heuristic-scale; not yet reused or standardized. & No & \citet{murjani2026drive} \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}\footnotesize
+\item[a] Standard suite and evolved set are public at \url{http://cs.adelaide.edu.au/~optlog/research/ttp.php}; the availability of the exact-reference set is not stated.
+\item[b] Only the disruption instances and code of \citet{sachdeva2020dynamic} are public at \url{https://github.com/ragavsachdeva/DynTTP}
+\item[c] \url{http://cs.adelaide.edu.au/~optlog/research/ttp.php}
+\item[d] \citet{santos2018thief} state the instances are hosted at \url{http://www.dpi.ufv.br/~andre/thop/}; this address no longer resolves (checked September 2026).
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

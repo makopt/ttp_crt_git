@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+figs/tikz_figures.aux
+figs/tikz_figures.log
+figs/tikz_figures.out
+figs/tikz_figures.fls
+figs/tikz_figures.fdb_latexmk
+data/ttp_biblio_meta.aux
+data/ttp_biblio_meta.log
+data/ttp_biblio_meta.out
+data/ttp_biblio_meta.blg
+data/ttp_biblio_meta.bbl
+data/ttp_biblio_meta.synctex.gz
+.DS_Store

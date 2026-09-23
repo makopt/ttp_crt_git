@@ -1,0 +1,51 @@
+% Schematic: the TTP variant design space as a directed acyclic graph.
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[
+  font=\footnotesize, >={Stealth[length=1.8mm]},
+  root/.style={draw=VarTTP1!55!black,line width=1pt,fill=VarTTP1,text=black,
+               rounded corners=3pt,align=center,inner sep=3pt,minimum width=1.9cm},
+  var/.style={draw=#1!55!black,line width=0.8pt,fill=#1!45,text=black,
+              rounded corners=3pt,align=center,inner sep=3pt,minimum width=1.5cm},
+  new/.style={draw=#1!55!black,line width=1pt,fill=#1,text=black,
+              rounded corners=3pt,align=center,inner sep=3pt,minimum width=1.5cm},
+  e/.style={->,line width=0.7pt,black!50},
+  lbl/.style={font=\tiny,fill=white,inner sep=1pt,midway},
+]
+\node[root] (t1) at (0,0) {\textbf{TTP1}\\[-2pt]\scriptsize 2013};
+
+% Row 2 and row 3 share one symmetric x-grid, centered on TTP1, so the whole
+% graph is a mirror image about the vertical axis through TTP1.
+\node[var=VarPWT]  (pwt)  at (-5.4,-2.3) {\textbf{PWT}\\[-2pt]\scriptsize 2015};
+\node[var=VarTTP2] (t2)   at (-1.8,-2.3) {\textbf{TTP2}\\[-2pt]\scriptsize 2017};
+\node[var=VarMTTP] (mttp) at ( 1.8,-2.3) {\textbf{MTTP}\\[-2pt]\scriptsize 2016};
+\node[var=VarThOP] (thop) at ( 5.4,-2.3) {\textbf{ThOP}\\[-2pt]\scriptsize 2018};
+
+\node[var=VarDTTP]  (dttp) at (-3.6,-4.8) {\textbf{DTTP}\\[-2pt]\scriptsize 2020};
+\node[new=VarCCTTP] (cc)   at (-1.0,-4.8) {\textbf{CCTTP}\\[-2pt]\scriptsize 2024};
+\node[new=VarTTPTW] (tw)   at ( 1.0,-4.8) {\textbf{TTPTW}\\[-2pt]\scriptsize 2026};
+\node[new=VarTTPD]  (td)   at ( 3.6,-4.8) {\textbf{TTP-D}\\[-2pt]\scriptsize 2026};
+
+% Row 2: direct edges from TTP1, each labeled with the dimension it fixes.
+\draw[e] (t1) -- (pwt)  node[lbl,sloped,above] {fixed route};
+\draw[e] (t1) -- (t2)   node[lbl,sloped,above] {bi-objective};
+\draw[e] (t1) -- (mttp) node[lbl,sloped,above] {multi-agent};
+\draw[e] (t1) -- (thop) node[lbl,sloped,above] {selective routing};
+
+% Row 3: DTTP and TTP-D are routed through the gap left of TTP2 and right of
+% MTTP (an elbow, so the straight run to the row-2 x-grid never crosses a
+% node), mirroring each other exactly; CCTTP and TTPTW run straight through
+% the central gap. The label on each elbow sits on its vertical run, turned
+% to follow that segment.
+\draw[e] (t1) -- (-3.6,-1.2)
+              -- (dttp) node[lbl,sloped,rotate=180,pos=0.75,above] {dynamic};
+\draw[e] (t2) -- (dttp) node[lbl,sloped,above] {dynamic (bi-obj.)};
+\draw[e] (t1) -- (cc) node[lbl,sloped,above] {stochastic capacity};
+\draw[e] (t1) -- (tw) node[lbl,sloped,above] {time windows};
+\draw[e] (t1) -- (3.6,-1.2)
+              -- (td) node[lbl,sloped,rotate=180,pos=0.75,below] {vehicle $+$ drone};
+\end{tikzpicture}
+\caption{The TTP variant design space as a directed acyclic graph rooted at
+TTP1.}
+\label{fig:taxdag}
+\end{figure}
