@@ -1,6 +1,10 @@
 # ttp_crt_git
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22913309.svg)](https://doi.org/10.5281/zenodo.22913309)
+
 Supplementary material of the review **"A Critical Review and Taxonomy of the Traveling Thief Problem and Its Variants"** (M. Khemakhem, submitted to *Computers & Operations Research*).
+
+Cite the archived snapshot (v1.0.0) via its DOI, `10.5281/zenodo.22913309`, rather than the live GitHub URL, which can change; the DOI always resolves to the exact version reviewers and readers see cited in the paper.
 
 Corpus: 93 primary studies plus one prior survey, published between 2013 and the third quarter of 2026. Link check of code repositories: 21 September 2026.
 
@@ -178,4 +182,3 @@ Notes on how some were produced:
 - The audit flags are rule-based on free text, so a wrong annotation gives a wrong flag.
 - The author coded all appraisal notes alone, following the fixed schema of Section 2.2 of the paper.
 - Only Tables 11 and 15 follow the data. The other tables are curated by hand, so a data change does not propagate to them.
-- The master workbook is not shared, so the audit flags cannot be recomputed from this repository. The figures can be regenerated.
